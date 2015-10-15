@@ -1,0 +1,24 @@
+<div ng-controller="BunglowsCtrl">
+  <div id="screencast-list-container">
+    <ul>
+      <li ng-repeat="property in propertiess"
+       ng-click="showProperty(property)">
+        <h3>{{property.name}} <small>({{property.price}})</small></h3>
+      </li>
+    </ul>
+  </div>
+
+
+  <div id="screencast-view-container" ng-show="selectedProperty">
+   <h1>{{selectedProperty.name}}</h1>
+   <img ng-src="{{selectedProperty.image_url}}"></img>
+    <h2>Beds:{{selectedProperty.beds}}</h2>
+    <h2>Baths:{{selectedProperty.baths}}</h2>
+    <h2>House Size:{{selectedProperty.house_Size}}</h2>
+    <h2>Lot size:{{selectedProperty.lot_Size}}</h2>
+    <h2>Year Built:{{selectedProperty.year_built}}</h2>
+    <h2>Style:{{selectedProperty.style}}</h2>
+    <h2>Property Type:{{selectedProperty.property_type}}</h2>
+    
+</div>
+</div>

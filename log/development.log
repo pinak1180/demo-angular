@@ -1,0 +1,186 @@
+  [1m[36m (313.9ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (289.6ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateProperties (20131119091941)
+  [1m[35m (106.3ms)[0m  CREATE TABLE `properties` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `image_url` varchar(255), `beds` varchar(255), `baths` varchar(255), `house_Size` varchar(255), `lot_Size` varchar(255), `year_built` varchar(255), `price` varchar(255), `style` varchar(255), `property_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (19.9ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20131119091941')
+  [1m[36m (59.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (8.8ms)[0m  INSERT INTO `properties` (`baths`, `beds`, `created_at`, `house_Size`, `image_url`, `lot_Size`, `name`, `price`, `property_type`, `style`, `updated_at`, `year_built`) VALUES ('2 Full Bath', '2 Bed', '2015-10-12 17:06:51', '1,872 Sq Ft', 'http://p.rdcpix.com/v02/ldc6e6445-w0t.jpg', '0.58 Acres', '740 S Orange Grove Boulevard Unit: 6, Pasadena, CA 91105', '$885,000', 'Condo/Townhome/Row Home/Co-Op', 'French', '2015-10-12 17:06:51', '1961')
+  [1m[36m (56.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `properties` (`created_at`, `image_url`, `name`, `updated_at`) VALUES ('2015-10-12 17:06:53', 'http://p.rdcpix.com/v01/l5cb85c45-w0t.jpg', '1300 Waverly Road, San Marino, CA 91108', '2015-10-12 17:06:53')[0m
+  [1m[35m (42.8ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36m (182.6ms)[0m  [1mDROP DATABASE IF EXISTS `bungloes_development`[0m
+  [1m[35m (0.2ms)[0m  DROP DATABASE IF EXISTS `bungloes_test`
+  [1m[36m (0.1ms)[0m  [1mCREATE DATABASE `bungloes_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`[0m
+  [1m[35m (0.1ms)[0m  CREATE DATABASE `bungloes_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (123.7ms)[0m  [1mCREATE TABLE `properties` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `image_url` varchar(255), `beds` varchar(255), `baths` varchar(255), `house_Size` varchar(255), `lot_Size` varchar(255), `year_built` varchar(255), `price` varchar(255), `style` varchar(255), `property_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (81.9ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36m (233.5ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`) [0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM `schema_migrations`
+  [1m[36m (74.8ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20131119091941')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (122.9ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (459.2ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateProperties (20131119091941)
+  [1m[35m (115.0ms)[0m  CREATE TABLE `properties` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `image_url` varchar(255), `beds` varchar(255), `baths` varchar(255), `house_Size` varchar(255), `lot_Size` varchar(255), `year_built` varchar(255), `price` varchar(255), `style` varchar(255), `property_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20131119091941')
+  [1m[36m (38.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-12 23:14:09 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 509ms (Views: 469.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-10-12 23:14:09 +0530
+
+
+Started GET "/assets/properties.css?body=1" for 127.0.0.1 at 2015-10-12 23:14:09 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-10-12 23:14:09 +0530
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-10-12 23:14:09 +0530
+
+
+Started GET "/assets/angular/controllers/bunglows_ctrl.js?body=1" for 127.0.0.1 at 2015-10-12 23:14:09 +0530
+
+
+Started GET "/assets/angular/services/bunglows.js?body=1" for 127.0.0.1 at 2015-10-12 23:14:09 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-10-12 23:14:09 +0530
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2015-10-12 23:14:10 +0530
+Processing by PropertiesController#index as JSON
+  [1m[35mProperties Load (0.3ms)[0m  SELECT `properties`.* FROM `properties`
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-12 23:14:44 +0530
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-10-12 23:14:44 +0530
+
+
+Started GET "/assets/properties.css?body=1" for 127.0.0.1 at 2015-10-12 23:14:44 +0530
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-10-12 23:14:44 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-10-12 23:14:44 +0530
+
+
+Started GET "/assets/angular/controllers/bunglows_ctrl.js?body=1" for 127.0.0.1 at 2015-10-12 23:14:44 +0530
+
+
+Started GET "/assets/angular/services/bunglows.js?body=1" for 127.0.0.1 at 2015-10-12 23:14:44 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-10-12 23:14:44 +0530
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2015-10-12 23:14:44 +0530
+Processing by PropertiesController#index as JSON
+  [1m[36mProperties Load (0.1ms)[0m  [1mSELECT `properties`.* FROM `properties`[0m
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+  [1m[36mProperty Load (0.1ms)[0m  [1mSELECT `properties`.* FROM `properties`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (28.0ms)[0m  [1mINSERT INTO `properties` (`baths`, `beds`, `created_at`, `house_Size`, `image_url`, `lot_Size`, `name`, `price`, `property_type`, `style`, `updated_at`, `year_built`) VALUES ('2 Full Bath', '3 Bed', '2015-10-12 17:55:30', '1,880 Sq Ft', 'http://p.rdcpix.com/v01/l43397244-m0t.jpg', '8,581 Sq Ft Lot', '1375 Chamberlain Road, Pasadena, CA 91103', '$980,000', 'Single Family Home', 'Mid Century', '2015-10-12 17:55:30', '1947')[0m
+  [1m[35m (112.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (46.7ms)[0m  INSERT INTO `properties` (`baths`, `beds`, `created_at`, `house_Size`, `image_url`, `lot_Size`, `name`, `price`, `property_type`, `style`, `updated_at`, `year_built`) VALUES ('2 Full Bath', '4 Bed', '2015-10-12 17:55:30', '1,805 Sq Ft', 'http://p.rdcpix.com/v01/lf50c6644-w0t.jpg', '6,708 Sq Ft Lot', '590 Douglas Street, Pasadena, CA 91104', '$645,000', 'Single Family Home', 'Cottage', '2015-10-12 17:55:30', '1927')
+  [1m[36m (77.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `properties` (`baths`, `beds`, `created_at`, `house_Size`, `image_url`, `lot_Size`, `name`, `price`, `property_type`, `style`, `updated_at`, `year_built`) VALUES ('3 Full Bath', '4 Bed', '2015-10-12 17:55:30', '3,723 Sq Ft', 'http://p.rdcpix.com/v01/l20636044-w0t.jpg', '0.25 Acres', '1650 Pleasant Way, Pasadena, CA 91105', '$1,559,000', 'Single Family Home', 'Spanish Colonial', '2015-10-12 17:55:30', '1929')[0m
+  [1m[35m (40.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `properties` (`baths`, `beds`, `created_at`, `house_Size`, `image_url`, `lot_Size`, `name`, `price`, `property_type`, `style`, `updated_at`, `year_built`) VALUES ('2 Full, 1 Half Bath', '2 Bed', '2015-10-12 17:55:30', '1,905 Sq Ft', 'http://p.rdcpix.com/v02/le2645544-w0t.jpg', '1.44 Acres', '1123 S Orange Grove Boulevard, Pasadena, CA 91105', '$785,000', 'Condo/Townhome/Row Home/Co-Op', 'French', '2015-10-12 17:55:30', '1964')
+  [1m[36m (40.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `properties` (`baths`, `beds`, `created_at`, `house_Size`, `image_url`, `lot_Size`, `name`, `price`, `property_type`, `style`, `updated_at`, `year_built`) VALUES ('5 Full, 1 Half Bath', '3 Bed', '2015-10-12 17:55:30', '4,336 Sq Ft', 'http://p.rdcpix.com/v01/l7f976e44-m0t.jpg', '0.76 Acres', '1010 San Rafael Lane, Pasadena, CA 91105', '$2,995,000', 'Single Family Home', 'Normandy, French Country (N)', '2015-10-12 17:55:30', '1925')[0m
+  [1m[35m (40.4ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `properties` (`baths`, `beds`, `created_at`, `house_Size`, `image_url`, `lot_Size`, `name`, `price`, `property_type`, `style`, `updated_at`, `year_built`) VALUES ('2 Full Bath', '4 Bed', '2015-10-12 17:55:30', '1,805 Sq Ft', 'http://p.rdcpix.com/v01/lf50c6644-w0t.jpg', '6,708 Sq Ft Lot', '590 Douglas Street, Pasadena, CA 91104', '$645,000', 'Single Family Home', 'Cottage', '2015-10-12 17:55:30', '1927')
+  [1m[36m (40.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `properties` (`baths`, `beds`, `created_at`, `house_Size`, `image_url`, `lot_Size`, `name`, `price`, `property_type`, `style`, `updated_at`, `year_built`) VALUES ('0 Bath', '4 Bed', '2015-10-12 17:55:30', '1,440 Sq Ft', 'http://p.rdcpix.com/v03/l79985144-w0t.jpg', '3,006 Sq Ft Lot', '2909 New Jersey Street, Los Angeles (City), CA 90033', '$269,000', 'Multi-Family Home', 'Traditional', '2015-10-12 17:55:30', '1968')[0m
+  [1m[35m (40.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (15.4ms)[0m  INSERT INTO `properties` (`baths`, `beds`, `created_at`, `house_Size`, `image_url`, `lot_Size`, `name`, `price`, `property_type`, `style`, `updated_at`, `year_built`) VALUES ('1 Full Bath', '1 Bed', '2015-10-12 17:55:30', '868 Sq Ft', 'http://p.rdcpix.com/v01/l8bb66a44-w0t.jpg', '1.13 Acres', '5530 Welland Avenue Unit: 13, Temple City, CA 91780', '$250,000', 'Condo/Townhome/Row Home/Co-Op', 'Traditional', '2015-10-12 17:55:30', '1971')
+  [1m[36m (58.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `properties` (`baths`, `beds`, `created_at`, `house_Size`, `image_url`, `lot_Size`, `name`, `price`, `property_type`, `style`, `updated_at`, `year_built`) VALUES ('2 Full, 1 Half Bath', '2 Bed', '2015-10-12 17:55:30', '1,905 Sq Ft', 'http://p.rdcpix.com/v02/le2645544-w0t.jpg', '1.44 Acres', '1123 S Orange Grove Boulevard, Pasadena, CA 91105', '$785,000', 'Condo/Townhome/Row Home/Co-Op', 'French', '2015-10-12 17:55:30', '1964')[0m
+  [1m[35m (40.4ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `properties` (`baths`, `beds`, `created_at`, `house_Size`, `image_url`, `lot_Size`, `name`, `price`, `property_type`, `style`, `updated_at`, `year_built`) VALUES ('3 Full Bath', '4 Bed', '2015-10-12 17:55:30', '3,723 Sq Ft', 'http://p.rdcpix.com/v01/l20636044-w0t.jpg', '0.25 Acres', '1650 Pleasant Way, Pasadena, CA 91105', '$1,559,000', 'Single Family Home', 'Spanish Colonial', '2015-10-12 17:55:30', '1929')
+  [1m[36m (40.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `properties` (`baths`, `beds`, `created_at`, `house_Size`, `image_url`, `lot_Size`, `name`, `price`, `property_type`, `style`, `updated_at`, `year_built`) VALUES ('2 Full Bath', '3 Bed', '2015-10-12 17:55:30', '1,880 Sq Ft', 'http://p.rdcpix.com/v01/l43397244-m0t.jpg', '8,581 Sq Ft Lot', '1375 Chamberlain Road, Pasadena, CA 91103', '$980,000', 'Single Family Home', 'Mid Century', '2015-10-12 17:55:30', '1947')[0m
+  [1m[35m (39.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (16.9ms)[0m  INSERT INTO `properties` (`baths`, `beds`, `created_at`, `house_Size`, `image_url`, `lot_Size`, `name`, `price`, `property_type`, `style`, `updated_at`, `year_built`) VALUES ('6 Full Bath', '7 Bed', '2015-10-12 17:55:31', '6,254 Sq Ft', 'http://p.rdcpix.com/v01/l944b6744-w0t.jpg', '0.38 Acres', '1031 Lavender Lane, La Canada Flintridge, CA 91011', '$3,200,000', 'Single Family Home', 'Traditional', '2015-10-12 17:55:31', '1947')
+  [1m[36m (57.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `properties` (`baths`, `beds`, `created_at`, `house_Size`, `image_url`, `lot_Size`, `name`, `price`, `property_type`, `style`, `updated_at`, `year_built`) VALUES ('5 Full Bath', '5 Bed', '2015-10-12 17:55:31', '5,713 Sq Ft', 'http://p.rdcpix.com/v01/l83806c44-w0t.jpg', '0.64 Acres', '1484 Rutherford Drive, Pasadena, CA 91103', '$2,898,000', 'Single Family Home', 'French Country (N)', '2015-10-12 17:55:31', '1988')[0m
+  [1m[35m (39.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `properties` (`baths`, `beds`, `created_at`, `house_Size`, `image_url`, `lot_Size`, `name`, `price`, `property_type`, `style`, `updated_at`, `year_built`) VALUES ('2 Full Bath', '3 Bed', '2015-10-12 17:55:31', '1,951 Sq Ft', 'http://p.rdcpix.com/v01/lcf466f44-m0t.jpg', '7,231 Sq Ft Lot', '947 W Hillcrest Boulevard, Monrovia, CA 91016', '$810,000', 'Single Family Home', 'Mid Century', '2015-10-12 17:55:31', '1960')
+  [1m[36m (40.1ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-12 23:25:44 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 21ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-10-12 23:25:44 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-10-12 23:25:44 +0530
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2015-10-12 23:25:44 +0530
+
+
+Started GET "/assets/properties.css?body=1" for 127.0.0.1 at 2015-10-12 23:25:44 +0530
+
+
+Started GET "/assets/angular/controllers/bunglows_ctrl.js?body=1" for 127.0.0.1 at 2015-10-12 23:25:44 +0530
+
+
+Started GET "/assets/angular/services/bunglows.js?body=1" for 127.0.0.1 at 2015-10-12 23:25:44 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-10-12 23:25:44 +0530
+
+
+Started GET "/api/properties" for 127.0.0.1 at 2015-10-12 23:25:44 +0530
+Processing by PropertiesController#index as JSON
+  [1m[35mProperties Load (0.4ms)[0m  SELECT `properties`.* FROM `properties`
+Completed 200 OK in 26ms (Views: 22.2ms | ActiveRecord: 1.5ms)
